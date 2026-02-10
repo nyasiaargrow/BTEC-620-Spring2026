@@ -46,6 +46,12 @@ head(controlaverage)
 foldchange <- treatmentaverage - controlaverage
 head(foldchange)
 
+#If genes fold change value is > 2, it's an up-regulated gene, and if it's < -2, it's a down-regulated gene, and if genes are between -2 and +2, they are insignificant genes
+
+#Export variable foldchange in an .CSV file
+write.csv(foldchange, "foldchange.csv")
+
+
 
 
 
